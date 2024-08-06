@@ -25,7 +25,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"default",
-"speed": 5.0
+"speed": 120.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -33,7 +33,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"jump",
-"speed": 5.0
+"speed": 120.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -47,7 +47,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"move",
-"speed": 5.0
+"speed": 6.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4862d"]
