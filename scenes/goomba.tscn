@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://b58a6lrrwfp4n"]
+
+[ext_resource type="Texture2D" uid="uid://dfswebx48deyt" path="res://assets/goomba.png" id="1_1qxgc"]
+[ext_resource type="Script" path="res://scenes/goomba.gd" id="1_sud4e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_00fid"]
+atlas = ExtResource("1_1qxgc")
+region = Rect2(0, 0, 19, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e6g0s"]
+atlas = ExtResource("1_1qxgc")
+region = Rect2(19, 0, 19, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cciln"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_00fid")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e6g0s")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3qd1j"]
+size = Vector2(34, 32)
+
+[node name="Goomba" type="CharacterBody2D"]
+script = ExtResource("1_sud4e")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_cciln")
+autoplay = "default"
+frame_progress = 0.397257
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_3qd1j")
